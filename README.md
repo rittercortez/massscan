@@ -9,31 +9,25 @@ Se trata de un ejemplo de uso de la herramienta Masscan.
 Es una herramienta se utiliza para el escaneo masivo de direcciones IPs, tiene la misma función de Nmap pero optimizada para tener más velocidad de peticiones
 
 ### Instalación de la Herramienta
-    ```
-    $ sudo apt-get update
-    $ sudo apt-get install masscan
-    $ dpkg -l | grep masscan
-    ```
-    
+   `$ sudo apt-get update`
+   `$ sudo apt-get install masscan`
+   `$ dpkg -l | grep masscan`
         Con la última instrucción comprobamos que tenemos masscan instalado
         
 ### Funcionamiento
     Ayuda rápida:
      Con esta instrucción arrancamos la herramienta 
-        ```
-        - $ masscan           
-        ```          
-       
-        - Ayuda y Manual
-        ```
-        $ masscan -h        
-        $ man masscan
-        ```
+        
+        `$ masscan`           
+    
+     Ayuda y Manual
+        
+        `$ masscan -h`        
+        `$ man masscan`
 
 ### Archivo de configuración
-    ´´´
-    - $ sudo masscan  - -echo 
-    ´´´
+    
+    `$ sudo masscan  - -echo`
     Para visualizar el archivo de configuración
 
 ## Ejemplos de Escaneo
