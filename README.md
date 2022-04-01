@@ -3,6 +3,11 @@ Escanea todas las IPs de ISP de España para ver si tienen el puerto 445 abierto
 Se trata de un ejemplo de uso de la herramienta Masscan.
 - Utilice un script que está escrito en bash 
 - Las IPs de toda españa las saque de esta página Web : http://www.nirsoft.net/countryip/es.html
+- El objetivo escanear la red entera de españa y comprobar si el puerto 445 estaba abierto, ya que es el puerto que contiene el servicio SMB 
+- Después de detectar los puertos abiertos, se puede comprobar si es vulnerable al virus de Wannacry que ataca justamente al servicio SMB
+- La comprobación se puede hacer a través de Nmap, con esta instrucción
+`$ sudo nmap -p445 --script smb-vuln-ms17-010.nse -iL [archivo IPs con puerto abierto] `
+
 
 
 
@@ -33,7 +38,7 @@ Es una herramienta se utiliza para el escaneo masivo de direcciones IPs, tiene l
 ## Ejemplos de Escaneo
 - Para realizar este ejemplo recogí las IPs en un *.csv
 - Limpié los datos para quedarme con las IPs
-- Hice un script que ejecutara la instrucción por cada IP y que guarda el resultado para saber los puerto 445 abiertos que pudieran ser vunerable a un ataque de WannaCry
+- Hice un script que ejecutara la instrucción por cada IP y que guarda el resultado para saber los puerto 445 abiertos.
 
     `$ sudo masscan 192.168.0.0/24 -p 80          (Red Sencilla)`
         
