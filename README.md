@@ -35,20 +35,20 @@ Es una herramienta se utiliza para el escaneo masivo de direcciones IPs, tiene l
 - Limpié los datos para quedarme con las IPs
 - Hice un script que ejecutara la instrucción por cada IP y que guarda el resultado para saber los puerto 445 abiertos que pudieran ser vunerable a un ataque de WannaCry
 
-    `$ **sudo masscan 192.168.0.0/24 -p 80          (Red Sencilla)**`
+    `$ sudo masscan 192.168.0.0/24 -p 80          (Red Sencilla)`
         
         Hace un escáner a todas las direcciones IP asociadas con esta red
         
-    `$ **sudo** **masscan -v -sS 120.0.0.1-180.80.0.1 -p0-10**`
+    `$ sudo masscan -v -sS 120.0.0.1-180.80.0.1 -p0-10`
     
         ***v*** se utiliza para aumentar el nivel de verbosidad
         ***120.0.0.1-180.80.0.1*** es el rango de IP utilizado en el escaneo
         ***sS*** se utiliza para hacer que TCP syn scan siempre esté activado
         ***p*** se utiliza para rangos de puerto. hemos utilizado -p0-10
         
-    `$ sudo masscan -p445 0.0. 0.0/24 --banners --rate 10000`
+    `$ sudo masscan -p445 120.0.0.0/24 --banners --rate 10000`
         
-        **masscan -v -sS 43.225.84.0-43.225.87.255 -p0-100**
+  
         
         
         
